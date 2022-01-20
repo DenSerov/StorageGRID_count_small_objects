@@ -93,7 +93,7 @@ def parselogProc (pipe):
                     last_elapsed=elapsed
                     pos=msg[0:19]
                     print("""\n{0:,d}M lines processed. Current pos {1:}. Only {2:5.2f} sec elapsed from start. Last 1M Avg {3:,d} lines/sec. Overall Avg {4:,d} lines/sec. Since last 1M point: {5:2.2f} sec."""\
-                        .format(count // (10**6) ,pos,round(elapsed,2),int( (10**6)/run10mln),int(count/elapsed),round(run10mln,2)))
+                        .format(count // (10**6) ,pos,round(elapsed,2),int(round(10**6)/run10mln),int(round(count/elapsed)),round(run10mln,2)))
                 if count % (10**7) == 0: 
                     print('\nPreliminairy Report at',pos)
                     print_report(buckets)
