@@ -1,0 +1,12 @@
+#!/bin/bash
+
+token=$1
+reponame=$2
+message=$3
+
+git init
+git add .
+git commit -m $message
+git branch -M main
+git remote add origin https://$token@github.com/DenSerov/$reponame.git
+git push -u origin main
