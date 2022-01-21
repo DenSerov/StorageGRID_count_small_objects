@@ -14,8 +14,8 @@ from time import time, localtime, strftime,sleep
 from json import loads, dumps
 from multiprocessing import Process, Pipe
 
-LOGPATH="C:/tmp"
-TMP="C:/tmp"
+LOGPATH="/var/local/audit/export"
+TMP="."
 
 def tstamp():
     ts = localtime()
